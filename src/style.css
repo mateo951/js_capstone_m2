@@ -1,3 +1,33 @@
-body {
-  background-color: red;
+ul.topnav {
+  list-style-type: none;
+  margin-left: 30%;
+  padding: 50px;
+  overflow: hidden;
+  font-family: arial;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  font-weight: 800;
+}
+
+ul.topnav li a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+  font-size: 17px;
+  
+}
+ul.topnav li a:hover:not(.active) {
+    background-color: #ddd;
+    color: black;
+}
+ul.topnav li a.active {
+  text-decoration: underline;
+}
+
+.logo {
+  border: black solid 3px;
+  border-radius: 80%;
 }
