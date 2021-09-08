@@ -5,6 +5,25 @@ import createBasket from './modules/createBasket.js';
 import Utilities from './modules/utilities.js';
 // import item from './modules/comment.js';
 
+
+
+const popup = document.getElementById('popup-article');
+
+document.addEventListener('DOMContentLoaded', (...e) => {
+  createBasket(...e)
+    .then(() => {
+      const commentButtons = document.getElementsByClassName('comment-button');
+      Array.from(commentButtons).forEach((button) => {
+        button.addEventListener('click', openPopupListener(button, popup));
+      });
+    });
+  // pagination(...e);
+});
+
+const closePopupButton = document.getElementById('close-popup');
+closePopupButton.addEventListener('click', closePopupListener(popup));
+
+
 const apiBasket = 'https://getpantry.cloud/apiv1/pantry/f30333b4-125d-4db2-8a42-2c216adec5bc/basket/games';
 window.addEventListener('DOMContentLoaded', () => {
   const items = {
@@ -17,8 +36,9 @@ window.addEventListener('DOMContentLoaded', () => {
     ],
   };
   if (Utilities.CheckJSON(JSON.stringify(items))) {
-    createBasket(apiBasket);
-    setData(apiBasket, items);
+    // createBasket(apiBasket);
+    // setData(apiBasket, items);
     retrieveData(apiBasket);
   }
 });
+

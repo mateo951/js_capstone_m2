@@ -26,7 +26,65 @@
     <ul class="gamesList"></ul>
   </section>
 
- <article id="popup-article"></article>
+  <article id="popup-article">
+    <div id="popup-container">
+      <div class="popup-scroll">
+        <button id="close-popup">close</button>
+        <div id="popup-image">
+          <img class="popup-image"
+               src= "./media/bow.jpg">
+        </div>
+        <h2 class="popup-game-name">Borde</h2>
+        <div id="popup-info">
+          <div class="info-row">
+            <p class="popup-info-entry">
+              <span class="info-entry-label">Game group:</span>
+              Drones
+            </p>
+            <p class="popup-info-entry">
+              <span class="info-entry-label">Game type:</span>
+              Surviver
+            </p>
+          </div>
+          <div class="info-row">
+            <p class="popup-info-entry">
+              <span class="info-entry-label">Game Time:</span>
+              10 Minuets
+            </p>
+            
+          </div>
+          
+        </div>
+        <div id="comments-container">
+          <h3>Comments <span id="comments-counter">(3)</span></h3>
+          <ul id="comments-list">
+            <li class="comment">
+              <span class="comment-date">4/09/2021</span>
+              <span class="commenter">Jon:</span>
+              <span class="comment-content">Amazing Game?</span>
+            </li>
+            <li class="comment">
+              <span class="comment-date">5/09/2021</span>
+              <span class="commenter">Mike:</span>
+              <span class="comment-content">Lovely!</span>
+            </li>
+            <li class="comment">
+              <span class="comment-date">9/09/2021</span>
+              <span class="commenter">Mateo:</span>
+              <span class="comment-content">Nice Game!</span>
+            </li>
+          </ul>
+        </div>
+        <h3>Add a comment</h3>
+        <form id="new-comment">
+          <input type="text" id="name" class="my-3"
+                 placeholder="Your name"><br>
+          <textarea id="input"
+                    placeholder="Your insight">
+          </textarea><br>
+          <button id="submit">Comment</button>
+        </form>
+  </article>
 
 
   <footer>
