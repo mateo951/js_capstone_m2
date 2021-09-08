@@ -1,12 +1,12 @@
 const createBasket = async (api) => {
   fetch(api, {
     headers: {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json',
     },
-    method: "POST"
-  }).catch(function (error) {
-    console.log(error);
+    method: 'POST',
+  }).catch((error) => {
+    throw error;
   });
-}
+};
 
 export default createBasket;

@@ -9,8 +9,8 @@ const setData = async (api, items) => fetch(api, {
 })
   .then(() => {
     retrieveData(api);
-  }).catch (function (error) {
-    console.log(error);
+  }).catch((error) => {
+    throw error;
   });
 
 export default setData;

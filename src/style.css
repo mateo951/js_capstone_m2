@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
 }
 
 ul li {
@@ -27,12 +27,13 @@ ul.topnav li a {
   text-decoration: none;
   float: left;
   font-size: 17px;
-  
 }
+
 ul.topnav li a:hover:not(.active) {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
+
 ul.topnav li a.active {
   text-decoration: underline;
 }
@@ -41,6 +42,7 @@ ul.topnav li a.active {
   border: black solid 3px;
   border-radius: 80%;
 }
+
 ul.gamesList {
   display: flex;
   flex-direction: row;
@@ -60,7 +62,7 @@ li.gameItem {
 footer {
   width: 100vw;
   height: 60px;
-  bottom:0;
+  bottom: 0;
   background-color: lightgray;
   color: blue;
   text-align: left;
@@ -93,53 +95,52 @@ img {
   margin: 10px;
 }
 
-
 .container {
-	max-width: 640px;
-	margin: 30px auto;
-	background: #fff;
-	border-radius: 8px;
-	padding: 20px;
+  max-width: 640px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .comment {
-	display: block;
-	transition: all 1s;
+  display: block;
+  transition: all 1s;
 }
+
 .commentClicked {
-	min-height: 0px;
-	border: 1px solid #eee;
-	border-radius: 5px;
-	padding: 5px 10px
+  min-height: 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .container textarea {
-	width: 100%;
-	border: none;
-	background: #E8E8E8;
-	padding: 5px 10px;
-	height: 50%;
-	border-radius: 5px 5px 0px 0px;
-	border-bottom: 2px solid green;
-	transition: all 0.5s;
-	margin-top: 15px;
+  width: 100%;
+  border: none;
+  background: #e8e8e8;
+  padding: 5px 10px;
+  height: 50%;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid green;
+  transition: all 0.5s;
+  margin-top: 15px;
 }
 
 button.primaryContained {
-	background: green;
-	color: #fff;
-	padding: 10px 10px;
-	border: none;
-	margin-top: 0px;
-	cursor: pointer;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
-	transition: 1s all;
-	font-size: 10px;
-	border-radius: 5px;
+  background: green;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  margin-top: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: 1s all;
+  font-size: 10px;
+  border-radius: 5px;
 }
 
 button.primaryContained:hover {
-	background: #9201A8;
+  background: #9201a8;
 }

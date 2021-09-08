@@ -1,4 +1,4 @@
-import displayData from "./displayData.js";
+import displayData from './displayData.js';
 
 const retrieveData = async (api) => {
   await fetch(api, {
@@ -7,8 +7,8 @@ const retrieveData = async (api) => {
     .then((response) => response.json())
     .then((result) => {
       displayData(result);
-    }).catch(function (error) {
-      console.log(error);
+    }).catch((error) => {
+      throw error;
     });
 };
 
