@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Raleway, sans-serif;
+}
+
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin-left: 30%;
+  padding: 50px;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 800;
+}
+
+ul.topnav li a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: #ddd;
+  color: black;
+}
+
+ul.topnav li a.active {
+  text-decoration: underline;
+}
+
+.logo {
+  border: black solid 3px;
+  border-radius: 80%;
+}
+
+ul.gamesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+li.gameItem {
+  margin-bottom: 20px;
+}
+
+.listItem {
+  flex-basis: 30%;
+}
+
+footer {
+  width: 100vw;
+  height: 60px;
+  bottom: 0;
+  background-color: lightgray;
+  color: blue;
+  text-align: left;
+}
+
+h4 {
+  margin-left: 1em;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.card-title {
+  font-size: 25px;
+}
+
+img {
+  width: 175px;
+  height: 175px;
+}
+
+.card {
+  max-width: 280px;
+  width: 33%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.btn-primary {
+  margin: 10px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.comment {
+  display: block;
+  transition: all 1s;
+}
+
+.commentClicked {
+  min-height: 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.container textarea {
+  width: 100%;
+  border: none;
+  background: #e8e8e8;
+  padding: 5px 10px;
+  height: 50%;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid green;
+  transition: all 0.5s;
+  margin-top: 15px;
+}
+
+button.primaryContained {
+  background: green;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  margin-top: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: 1s all;
+  font-size: 10px;
+  border-radius: 5px;
+}
+
+button.primaryContained:hover {
+  background: #9201a8;
+}
