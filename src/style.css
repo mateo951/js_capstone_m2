@@ -1,6 +1,14 @@
-body {
+* {
   padding: 0;
   margin: 0;
+  font-family: Raleway;
+}
+
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul.topnav {
@@ -8,10 +16,7 @@ ul.topnav {
   margin-left: 30%;
   padding: 50px;
   overflow: hidden;
-  font-family: arial;
   text-align: center;
-  position: sticky;
-  top: 0;
   font-weight: 800;
 }
 
@@ -36,16 +41,54 @@ ul.topnav li a.active {
   border: black solid 3px;
   border-radius: 80%;
 }
+ul.gamesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+li.gameItem {
+  margin-bottom: 20px;
+}
+
+.listItem {
+  flex-basis: 30%;
+}
 
 footer {
   width: 100vw;
   height: 60px;
-  position:absolute;
   bottom:0;
-  border: 2px solid black;
+  background-color: lightgray;
+  color: blue;
   text-align: left;
 }
 
 h4 {
   margin-left: 1em;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.card-title {
+  font-size: 25px;
+}
+
+img {
+  width: 175px;
+  height: 175px;
+}
+
+.card {
+  max-width: 280px;
+  width: 33%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.btn-primary {
+  margin: 10px;
 }

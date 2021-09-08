@@ -1,10 +1,17 @@
-const displayData = (data) => {
-  // const listItems = document.querySelector('.list-group');
-  // const { result } = data;
-  // Utilities.resetElement(listItems);
-  // result.forEach((item) => {
-  //   listItems.innerHTML += `<li class="list-group-item">${item.user}: <span class="floatRight badge badge-primary badge-pill">${item.score}</span></li>`;
-  // });
-}
+import bow from '../media/bow.jpg'
 
+const displayData = (data) => {
+  const list = document.querySelector('.gamesList');
+  const { games } = data;
+  games.forEach((item) => {
+    list.innerHTML += `<li class="card gameItem"><div>
+    <img src="${bow}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${item.game}</h5>
+      <a href="#" class="btn btn-primary">Reservations</a>
+      <a href="#" class="btn btn-primary">Reviews</a>
+    </div>
+  </li>`;
+  });
+}
 export default displayData;
