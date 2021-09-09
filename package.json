@@ -48,6 +48,7 @@
     "webpack-dev-server": "^4.1.0"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "masonry-layout": "^4.2.2"
   }
 }

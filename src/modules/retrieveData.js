@@ -1,15 +1,14 @@
-import displayData from './displayData.js';
-
 const retrieveData = async (api) => {
-  await fetch(api, {
-    method: 'GET',
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      displayData(result);
-    }).catch((error) => {
-      throw error;
-    });
+  let data = await fetch(api, {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "gamerpower.p.rapidapi.com",
+      "x-rapidapi-key": "undefined"
+    }
+  }
+);
+  let res = await data.json();
+  return res;
 };
 
 export default retrieveData;

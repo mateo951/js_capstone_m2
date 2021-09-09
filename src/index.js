@@ -1,24 +1,53 @@
 import './style.css';
+import Masonry from 'masonry-layout';
 import retrieveData from './modules/retrieveData.js';
+import retrieveLikes from './modules/retrieveLikes.js';
 import setData from './modules/setData.js';
-import createBasket from './modules/createBasket.js';
 import Utilities from './modules/utilities.js';
 // import item from './modules/comment.js';
+import displayData from './modules/displayData';
+import showLikes from './modules/showLikes.js';
+import createLike from './modules/createLike';
 
-const apiBasket = 'https://getpantry.cloud/apiv1/pantry/f30333b4-125d-4db2-8a42-2c216adec5bc/basket/games';
+const apiBasket = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,racist,sexist,explicit&type=single&amount=10';
+const likesAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/N7DhoEcSDpK14RDHLmY3/likes'
+
+let createLikesEvents = () => {
+  let gamesButtons = document.querySelectorAll('.likeBttns');
+  gamesButtons.forEach(bttn => {
+    bttn.addEventListener('click', (e) => {
+      createLike(likesAPI, e.target.id.substring(1));
+    })
+  });
+}
+
 window.addEventListener('DOMContentLoaded', () => {
-  const items = {
-    games: [{ game: 'Breath of the Wild', imageURL: './media/bow.png' },
-      { game: 'Super Mario 64', imageURL: './media/bow.png' },
-      { game: 'Age of Empires', imageURL: './media/bow.png' },
-      { game: 'Donkey Kong', imageURL: './media/bow.png' },
-      { game: 'The Sims', imageURL: './media/bow.png' },
-      { game: 'Grand Theft Auto', imageURL: './media/bow.png' },
-    ],
-  };
-  if (Utilities.CheckJSON(JSON.stringify(items))) {
-    createBasket(apiBasket);
-    setData(apiBasket, items);
-    retrieveData(apiBasket);
-  }
+  // createBasket(apiBasket);
+  // setData(apiBasket, items);
+  retrieveData(apiBasket)
+    .then((response) => {
+      let { jokes } = response;
+      console.log(jokes)
+      displayData(jokes);
+      loadGrid();
+      // createLikesEvents();
+    });
+  // retrieveLikes(likesAPI)
+  //   .then((response) => {
+  //     showLikes(response);
+  //   });
 });
+
+
+let loadGrid = () => {
+  const grid = document.querySelector('.jokesGrid');
+  const masonry = new Masonry(grid, {
+    itemSelector: '.grid-item',
+    gutter: '.gutter-sizer',
+  });
+}
+
+
+
+
+

@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: Raleway, sans-serif;
+  color: darkslategray;
 }
 
 ul li {
@@ -12,26 +13,27 @@ ul li {
 }
 
 ul.topnav {
+  display: inline-block;
   list-style-type: none;
-  margin-left: 30%;
-  padding: 50px;
-  overflow: hidden;
   text-align: center;
+  padding: 40px;
   font-weight: 800;
+  width: 100%;
+  padding-left: 30vw;
 }
 
 ul.topnav li a {
-  color: black;
+  color: darkslategray;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  padding: 15px;
   float: left;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 ul.topnav li a:hover:not(.active) {
   background-color: #ddd;
-  color: black;
+  color: rgb(255, 233, 233);
 }
 
 ul.topnav li a.active {
@@ -39,24 +41,11 @@ ul.topnav li a.active {
 }
 
 .logo {
-  border: black solid 3px;
-  border-radius: 80%;
-}
-
-ul.gamesList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-li.gameItem {
-  margin-bottom: 20px;
-}
-
-.listItem {
-  flex-basis: 30%;
+  content:url("./media/logo1.png");
+  border: none;
+  width: 65px;
+  height: 65px;
+  float: left;
 }
 
 footer {
@@ -75,20 +64,9 @@ h4 {
   padding-top: 20px;
 }
 
-.card-title {
-  font-size: 25px;
-}
-
 img {
   width: 175px;
   height: 175px;
-}
-
-.card {
-  max-width: 280px;
-  width: 33%;
-  padding: 10px;
-  margin: 10px;
 }
 
 .btn-primary {
@@ -144,3 +122,26 @@ button.primaryContained {
 button.primaryContained:hover {
   background: #9201a8;
 }
+
+.jokesGrid {
+  padding: 4.5%;
+}
+
+.jokesGrid .gutter-sizer { width: 0.53%; }
+
+.grid-item {
+  width: 30%; 
+  background-color: #FAF9D6;
+  text-align: center;
+  padding: 25px;  
+  margin-bottom: 10px;
+  background-clip: border-box;
+  border: 1px solid gainsboro;
+  border-radius: .25rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1.1rem; 
+  word-wrap: break-word;
+}
+
+
