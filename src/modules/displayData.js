@@ -1,5 +1,4 @@
 const displayData = (data) => {
-  console.log("Displaying data")
   const list = document.querySelector('.jokesGrid');
   data.forEach((item) => {
     list.innerHTML += `

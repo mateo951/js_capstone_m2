@@ -2,12 +2,11 @@ import './style.css';
 import Masonry from 'masonry-layout';
 import retrieveData from './modules/retrieveData.js';
 import Utilities from './modules/utilities.js';
-// import item from './modules/comment.js';
 import displayData from './modules/displayData';
 import showLikes from './modules/showLikes.js';
 import createLike from './modules/createLike.js';
 import Jokes from './modules/jokes.js';
-// import createApp from './modules/createInvolvementApi.js';
+import jokesCounter from './modules/jokesCounter.js';
 
 const apiBasket = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,racist,sexist,explicit&type=single&amount=10';
 const likesAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Y7iejPnAfWtrIBxaaLI3/likes'
@@ -41,10 +40,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-let jokesCounter = () => {
-  let jokes = document.querySelectorAll('.grid-item');
-  return jokes.length;
-}
 
 let loadGrid = () => {
   const grid = document.querySelector('.jokesGrid');
