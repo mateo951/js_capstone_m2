@@ -14,9 +14,10 @@ const likesAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capston
 const createLikesEvents = () => {
   const gamesButtons = document.querySelectorAll('.likeBttns');
   gamesButtons.forEach((bttn) => {
-    bttn.addEventListener('click', (e) => {
+    bttn.addEventListener('click', async (e) => {
       if (Utilities.hasValue(e.currentTarget.id)) {
         createLike(likesAPI, e.currentTarget.id.substring(1));
+        showLikes(await retrieveData(likesAPI));
       }
     });
   });
@@ -30,18 +31,17 @@ const loadGrid = () => {
   });
 };
 
+const loadData = async () =>  {
+  let jokesData = await retrieveData(apiBasket);
+  const { jokes } = jokesData;
+  Jokes.setJokes(jokes);
+  displayData(jokes);
+  loadGrid();
+  createLikesEvents();
+  document.getElementById('numberJokes').innerHTML = jokesCounter();
+  showLikes(await retrieveData(likesAPI));
+}
+
 window.addEventListener('DOMContentLoaded', () => {
-  retrieveData(apiBasket)
-    .then((response) => {
-      const { jokes } = response;
-      Jokes.setJokes(jokes);
-      displayData(jokes);
-      loadGrid();
-      createLikesEvents();
-      document.getElementById('numberJokes').innerHTML = jokesCounter();
-      retrieveData(likesAPI)
-        .then((response) => {
-          showLikes(response);
-        });
-    });
+  loadData();
 });

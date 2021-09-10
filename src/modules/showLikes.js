@@ -1,6 +1,6 @@
 import Jokes from './jokes.js';
 
-const showLikes = async (likes) => {
+const showLikes = (likes) => {
   const jokes = Jokes.getJokes();
   Object.values(jokes).forEach((joke) => {
     likes.forEach((likedItem) => {
