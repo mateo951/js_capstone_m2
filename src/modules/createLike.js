@@ -1,21 +1,21 @@
-import displayData from "./displayData";
 import showLikes from "./showLikes";
+import retrieveData from "./retrieveData.js";
 
 const createLike = async (api, itemId) => {
-  const response = await fetch(api, {
+  await fetch(api, {
     method: 'POST',
+    body: JSON.stringify({ item_id: `${itemId}` }),
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json; charset=utf-8',
     },
-    body: JSON.stringify({
-      item_id: `item${itemId}`,
-    }),
-  }).then((response) => response.json())
-    .then((res) => showLikes(res))
-    .catch((error) => {
-      throw error;
-    });
-
+  }).then(() => retrieveData(api)
+      .then((response) => {
+        showLikes(response);
+      })
+    ).catch((error) => {
+    throw error;
+  });
 };
 
 export default createLike;
+

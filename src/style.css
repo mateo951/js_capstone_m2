@@ -125,6 +125,7 @@ button.primaryContained:hover {
 
 .jokesGrid {
   padding: 4.5%;
+  padding-top: 15px;
 }
 
 .jokesGrid .gutter-sizer { width: 0.53%; }
@@ -134,7 +135,7 @@ button.primaryContained:hover {
   background-color: #FAF9D6;
   text-align: center;
   padding: 25px;  
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   background-clip: border-box;
   border: 1px solid gainsboro;
   border-radius: .25rem;
@@ -144,4 +145,7 @@ button.primaryContained:hover {
   word-wrap: break-word;
 }
 
+.jokesFilters {
+  margin-left: 6%;
+}
 

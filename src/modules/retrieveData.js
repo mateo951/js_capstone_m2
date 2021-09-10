@@ -1,13 +1,9 @@
 const retrieveData = async (api) => {
-  let data = await fetch(api, {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-host": "gamerpower.p.rapidapi.com",
-      "x-rapidapi-key": "undefined"
-    }
-  }
-);
+  let data = await fetch(api);
   let res = await data.json();
+  if (!Object.keys(res).length) {
+    throw "no data found";
+  }
   return res;
 };
 
