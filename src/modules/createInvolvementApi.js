@@ -6,6 +6,6 @@ const createApp = async () => {
   });
   const resNewApp = await fetchNewApp.json();
   return resNewApp;
-}
+};
 
 export default createApp;

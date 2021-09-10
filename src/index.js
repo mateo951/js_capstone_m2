@@ -31,8 +31,8 @@ const loadGrid = () => {
   });
 };
 
-const loadData = async () =>  {
-  let jokesData = await retrieveData(apiBasket);
+const loadData = async () => {
+  const jokesData = await retrieveData(apiBasket);
   const { jokes } = jokesData;
   Jokes.setJokes(jokes);
   displayData(jokes);
@@ -40,7 +40,7 @@ const loadData = async () =>  {
   createLikesEvents();
   document.getElementById('numberJokes').innerHTML = jokesCounter();
   showLikes(await retrieveData(likesAPI));
-}
+};
 
 window.addEventListener('DOMContentLoaded', () => {
   loadData();
