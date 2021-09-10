@@ -9,7 +9,7 @@ Built With
 
 [Live Demo](https://mateo951.github.io/js_capstone_m2/)
 
-![Alt text](./src/demo.png?raw=true)
+![Alt text](./src/media/demo.png?raw=true)
 
 
 
