@@ -1,5 +1,5 @@
-import showLikes from "./showLikes";
-import retrieveData from "./retrieveData.js";
+import showLikes from './showLikes.js';
+import retrieveData from './retrieveData.js';
 
 const createLike = async (api, itemId) => {
   await fetch(api, {
@@ -9,13 +9,11 @@ const createLike = async (api, itemId) => {
       'Content-Type': 'application/json; charset=utf-8',
     },
   }).then(() => retrieveData(api)
-      .then((response) => {
-        showLikes(response);
-      })
-    ).catch((error) => {
+    .then((response) => {
+      showLikes(response);
+    })).catch((error) => {
     throw error;
   });
 };
 
 export default createLike;
-

@@ -7,6 +7,7 @@ export default class Utilities {
     }
     return false;
   }
+
   static hasValue = (input) => {
     if (input === '') {
       return false;

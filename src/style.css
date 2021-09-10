@@ -41,7 +41,7 @@ ul.topnav li a.active {
 }
 
 .logo {
-  content:url("./media/logo1.png");
+  content: url("./media/logo1.png");
   border: none;
   width: 65px;
   height: 65px;
@@ -131,21 +131,20 @@ button.primaryContained:hover {
 .jokesGrid .gutter-sizer { width: 0.53%; }
 
 .grid-item {
-  width: 30%; 
-  background-color: #FAF9D6;
+  width: 30%;
+  background-color: #faf9d6;
   text-align: center;
-  padding: 25px;  
+  padding: 25px;
   margin-bottom: 6px;
   background-clip: border-box;
   border: 1px solid gainsboro;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   display: inline-block;
   font-weight: 900;
-  font-size: 1.1rem; 
+  font-size: 1.1rem;
   word-wrap: break-word;
 }
 
 .jokesFilters {
   margin-left: 6%;
 }
-
